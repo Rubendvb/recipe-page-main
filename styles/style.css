@@ -1,3 +1,96 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dar-Charcoal: hsl(24, 5%, 18%);
+  --font-outfit: 'Outfit', sans-serif;
+  --font-young-serif: 'YoungSerif', sans-serif;
+}
+
+body {
+  font-family: var(--font-outfit);
+  background-color: var(--Eggshell);
+  font-size: 16px;
+}
+
+.bg {
+  background-color: var(--White);
+}
+
+.main {
+  padding: 42px 32px;
+}
+
+.simple {
+  h1 {
+    font-size: 2.25rem;
+    font-family: var(--font-young-serif);
+    color: var(--Dar-Charcoal);
+    line-height: 1;
+    text-wrap: wrap;
+    margin-bottom: 38px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--Wenge-Brown);
+    line-height: 1.4;
+    text-wrap: wrap;
+    margin-bottom: 36px;
+  }
+
+  article {
+    padding: 24px 26px;
+    background-color: var(--Rose-White);
+    border-radius: 10px;
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--Dark-Raspberry);
+      margin-bottom: 28px;
+    }
+
+    ul {
+      margin-left: 42px;
+
+      li {
+        color: var(--Wenge-Brown);
+        list-style: none;
+        position: relative;
+
+        &::before {
+          content: '\2022';
+          color: var(--Dark-Raspberry);
+          position: absolute;
+          top: 50%;
+          left: -36px;
+          transform: translateY(-50%);
+          font-size: 20px;
+        }
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
